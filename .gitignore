@@ -7,3 +7,7 @@ bin/
 .vercel/
 *.log
 .DS_Store
+
+.agents/
+AGENTS.md
+skills-lock.json
