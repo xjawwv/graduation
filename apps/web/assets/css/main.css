@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: "IBM Plex Sans Variable", "IBM Plex Sans", "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+html, body, #__nuxt { min-height: 100%; margin: 0; background: #0d1014; color: #e8e3d5; }
+html.display-surface,
+html.display-surface body,
+html.display-surface #__nuxt { background: transparent; }
+body { overscroll-behavior: none; }
+button, a, input, select, textarea { touch-action: manipulation; -webkit-tap-highlight-color: rgba(214, 168, 75, .18); }
+.safe-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+.skip-link { @apply fixed left-4 top-3 z-[100] -translate-y-20 bg-[#e8e3d5] px-3 py-2 text-sm font-semibold text-[#0d1014] transition-transform focus:translate-y-0; }
+.panel-card { @apply border border-[#2a3038] bg-[#151a20] p-5 shadow-none; }
+.panel-heading { @apply flex items-center gap-2 text-base font-semibold text-[#f2eee3]; }
+.panel-rule { @apply border-[#2a3038]; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-md border px-4 py-2.5 text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d6a84b] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0d1014] disabled:cursor-not-allowed disabled:opacity-40; }
+.btn-primary { @apply btn border-[#d6a84b] bg-[#d6a84b] text-[#15110a] hover:border-[#e3b85a] hover:bg-[#e3b85a] active:bg-[#c99a3d]; }
+.btn-secondary { @apply btn border-[#343c46] bg-[#1b2128] text-[#d9dde2] hover:border-[#59636f] hover:bg-[#242b33] active:bg-[#2a323b]; }
+.btn-danger { @apply btn border-[#613735] bg-[#271a1a] text-[#ef9b92] hover:border-[#95504a] hover:bg-[#342020] active:bg-[#421f1d]; }
+.input { @apply w-full border border-[#343c46] bg-[#0f1318] px-3 py-2.5 text-[#ece8dd] outline-none transition-colors placeholder:text-[#68717c] hover:border-[#4a5561] focus-visible:border-[#d6a84b] focus-visible:ring-2 focus-visible:ring-[#d6a84b]/20; }
+.label { @apply mb-1.5 block text-sm font-medium text-[#a5adb7]; }
+.data-value { @apply font-semibold tabular-nums text-[#f3efe5]; }
+.status-dot { @apply inline-block h-2 w-2 rounded-full; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

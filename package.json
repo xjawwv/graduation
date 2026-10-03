@@ -1,0 +1,17 @@
+{
+  "name": "graduation-live-reactions",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @graduation/web",
+    "build:web": "npm run build --workspace @graduation/web",
+    "preview:web": "npm run preview --workspace @graduation/web",
+    "typecheck:web": "npm run typecheck --workspace @graduation/web",
+    "dev:server": "go run ./apps/server/cmd/server",
+    "test:server": "go test ./apps/server/...",
+    "vet:server": "go vet ./apps/server/...",
+    "loadtest": "go run ./apps/server/cmd/loadtest"
+  }
+}

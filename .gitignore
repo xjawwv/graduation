@@ -1,0 +1,9 @@
+.env
+node_modules/
+apps/web/.nuxt/
+apps/web/.output/
+apps/server/bin/
+bin/
+.vercel/
+*.log
+.DS_Store
